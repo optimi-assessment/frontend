@@ -17,13 +17,14 @@ export default function useProjectGroups() {
         }
     };
 
-    const { isPending, data } = useQuery({
+    const { data, isError, isPending } = useQuery({
         queryKey: ['projectGroups'],
         queryFn: () => fetchProjectGroups(),
     });
 
     return {
-      isLoading: isPending,
       data,
+      isError,
+      isLoading: isPending,
     };
 }

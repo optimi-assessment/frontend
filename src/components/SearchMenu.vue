@@ -9,6 +9,9 @@
       </template>
       Search
     </ui-textfield>
+    <div class="error" v-if="isError">
+      Oops, please confirm the backend is running.
+    </div>
     <ul v-for="(projectItem, projectIndex) in filteredData" :key="projectIndex">
       <li>
         <ui-grid
@@ -54,6 +57,10 @@ const props = defineProps({
   data: {
     required: true,
     type: Array,
+  },
+  isError: {
+    required: true,
+    type: Boolean,
   },
   isLoading: {
     required: true,
@@ -221,6 +228,14 @@ watch(searchQuery, newV => {
 </script>
 
 <style scoped>
+.error {
+  font-weight: bold;
+  color: gray;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+}
 .list-header:hover {
   cursor: pointer;
 }
@@ -262,9 +277,10 @@ ul {
   padding: 5px;
   height: 400;
   position: absolute;
-  top: 12%;
+  top: 10%;
   right: 20px;
   margin: 0px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 label {

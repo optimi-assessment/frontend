@@ -12,6 +12,7 @@
     <SearchMenu
       :data="projectsData || []"
       :is-loading="isLoading || false"
+      :is-error="isError || false"
       v-model="isMenuOpen"
     />
   </div>
@@ -23,7 +24,7 @@ import useProjects from '@/composables/useProjects';
 
 import SearchMenu from './SearchMenu.vue';
 
-const { isLoading, data: projectsData } = useProjects();
+const { isError, isLoading, data: projectsData } = useProjects();
 
 const isMenuOpen = ref(false);
 
