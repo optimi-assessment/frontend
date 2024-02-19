@@ -1,32 +1,28 @@
 # project_groups_spa
 
-This template should help get you started developing with Vue 3 in Vite.
+A vue3 vite single-page application that filters and searches data from the http://localhost:3000/projects endpoint.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Installation
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Usage example
+
+(PLEASE MAKE SURE THE BACKEND IS RUNNING BEFOREHAND!)
+
+Run the application, it uses vite for fast reloads.
 
 ```sh
-npm run dev
+npm run server
 ```
+Once the command is done running you should see this on your terminal.
 
-### Compile and Minify for Production
+![alt text](./screenshots/running_cli.png)
 
-```sh
-npm run build
-```
+Next you can install the frontend.
+
 
 ### Lint with [ESLint](https://eslint.org/)
 
