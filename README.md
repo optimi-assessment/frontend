@@ -15,7 +15,7 @@ npm install
 Run the application, it uses vite for fast reloads.
 
 ```sh
-npm run server
+npm run dev
 ```
 Once the command is done running you should see this on your terminal.
 
